@@ -1,3 +1,5 @@
 
 
-<a href="{{ route('login') }}">Salir del sistema</a>
+<a href="{{ route('logout') }}">Salir del sistema</a>
+
+{{ Auth::user()->id; }}

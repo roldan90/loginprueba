@@ -13,13 +13,12 @@ class AuthController extends Controller
 
     public function __construct(){
         $this->middleware(["guest"])->only(["index"]);
-        $this->middleware((["auth"]))->only(["logout"]);
+       
     }
 
     public function index() {
         return view( 'welcome');
     }
-
 
     public function logear(Request $request) {
         $credenciales = $request->only("user", "password");
